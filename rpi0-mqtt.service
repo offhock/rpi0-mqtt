@@ -1,0 +1,12 @@
+[Unit]
+Description=Raspbeery pi zero CPU temperature via MQTT
+After=network-online.target
+
+[Service]
+ExecStart=/home/offhock/work/ha-sensor-mqtt/rpi0-mqtt.py
+WorkingDirectory=/home/offhock/work/ha-sensor-mqtt
+Restart=always
+User=offhock
+
+[Install]
+WantedBy=multi-user.target
